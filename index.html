@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- SEO, CHARSETS, AND BASIC CONFIG-->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0 user-scalable=no">
+    <link rel="shortcut icon" type="image/ico" href="./public/img/svg/dev-icon.svg"/>
+    
+
+    <!-- PWA -->
+    <link rel="manifest" href="manifest.json">
+
+    <!-- Android -->
+    <meta name="theme-color" content="#3b5998">
+
+    <!-- IOS -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+
+
+    <link rel="apple-touch-icon" href="img/icons/icon-192x192.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="img/icons/icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="img/icons/icon-192x192.png">
+    <link rel="apple-touch-icon" sizes="167x167" href="img/icons/icon-152x152.png">
+
+    <!-- iPhone X (1125px x 2436px) -->
+    <link rel="apple-touch-startup-image" media="(device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3)" href="img/icons-ios/apple-launch-1125x2436.png">
+    <!-- iPhone 8, 7, 6s, 6 (750px x 1334px) -->
+    <link rel="apple-touch-startup-image" media="(device-width: 375px) and (device-height: 667px) and (-webkit-device-pixel-ratio: 2)" href="img/icons-ios/apple-launch-750x1334.png">
+    <!-- iPhone 8 Plus, 7 Plus, 6s Plus, 6 Plus (1242px x 2208px) -->
+    <link rel="apple-touch-startup-image" media="(device-width: 414px) and (device-height: 736px) and (-webkit-device-pixel-ratio: 3)" href="img/icons-ios/apple-launch-1242x2208.png">
+    <!-- iPhone 5 (640px x 1136px) -->
+    <link rel="apple-touch-startup-image" media="(device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2)" href="img/icons-ios/apple-launch-640x1136.png">
+
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+    <meta name="apple-mobile-web-app-title" content="Twittor!">
+
+    <!-- LIBRARIES -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/pouchdb@7.2.1/dist/pouchdb.min.js"></script>
+
+    <!-- LINKS AND STYLES -->
+    <link rel="stylesheet" href="./public/css/style.css">
+
+    <!-- SCRIPTS -->
+    <script src="./public/js/index.js" defer type="module"></script>
+
+    
+    <title id="titulo">Document</title>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg" data-nm="true" data-bg="#3b5998">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#" id="titulo">Mis Notas</a>
+            <button id="toggler" class="d-lg-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#side_bar" aria-controls="side_bar">
+                ≡
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0" id="menu">
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="offcanvas offcanvas-start" data-bg="#3b5998" style="width:300px"; tabindex="-1" id="side_bar" aria-labelledby="side_titulo">
+        <div>
+            <img src="./public/img/svg/bus-stop-bg.svg" alt="" width="100%" id="foto_perfil">
+        </div>
+        <div class="offcanvas-header">
+            <a class="navbar-brand" href="#" id="side_titulo"></a>
+            <!--<h5 class="offcanvas-title" id="side_titulo"></h5>-->
+        </div>
+        <div class="offcanvas-body">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0" id="side_menu">
+          </ul>
+        </div>
+    </div>
+    <main class="col p-2 mx-auto" id="main">
+        <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#modal" id="btn-modal">
+            Nueva Nota
+        </button>
+        <section id="section" class="table-responsive"></section>        
+    </main>
+      <div class="modal fade" id="modal" tabindex="-1" aria-labelledby="modalLabel" aria-hidden="true">
+        <form class="modal-dialog" id="modal-form">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="modalLabel">Nueva nota</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                  <textarea class="form-control" placeholder="Nueva nota aqui.." id="nota" name="nota"></textarea>
+              </div>
+              <div class="modal-footer">
+                  <button type="submit" class="btn btn-primary">Guardar</button>
+              </div>
+            </div>
+          </form>
+      </div>
+      <div class="modal fade" id="edit" tabindex="-1" aria-labelledby="modalLabel" aria-hidden="true">
+        <form class="modal-dialog" id="edit-form">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="modalLabel">Editar Nota</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                  <textarea class="form-control" placeholder="Nueva nota aqui.." id="nota-edit" name="nota-edit"></textarea>
+              </div>
+              <div class="modal-footer">
+                  <button type="submit" class="btn btn-primary">Guardar</button>
+              </div>
+            </div>
+          </form>
+      </div>
+      <script src="./public/libraries/pouchdb-find.js"></script>
+</body>
+</html>

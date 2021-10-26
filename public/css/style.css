@@ -1,0 +1,6 @@
+table tr td:first-child{
+    white-space: nowrap;
+    width: 7em; 
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
