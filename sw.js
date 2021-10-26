@@ -11,15 +11,14 @@ const APP_SHELL = [
     //'/',
     'index.html',
     'public/css/style.css',
-    'public/img/svg/dev-icon.svg',
+    'public/js/index.js',
+    'public/js/helpers/Sw/sw-utils.js'
+    /*'public/img/svg/dev-icon.svg',
     'public/img/avatars/hulk.jpg',
     'public/img/avatars/ironman.jpg',
     'public/img/avatars/spiderman.jpg',
     'public/img/avatars/thor.jpg',
-    'public/img/avatars/wolverine.jpg',
-    'public/js/index.js',
-    'public/libraries/pouchdb-find.js',
-    'public/js/helpers/Sw/sw-utils.js'
+    'public/img/avatars/wolverine.jpg',*/
 ];
 
 const APP_SHELL_INMUTABLE = [
