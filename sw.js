@@ -8,10 +8,14 @@ const INMUTABLE_CACHE = 'inmutable-v1';
 
 
 const APP_SHELL = [
-    //'/',
+    './',
     './index.html',
     './public/css/style.css',
-    './public/js/index.js'
+    './public/js/index.js',
+    './public/js/helpers/Sw/sw-utils.js',
+    './public/img/svg/bus-stop-bg.svg',
+    './public/img/svg/dev-icon.svg',
+
     /*'./public/css/style.css',
     './public/js/index.js',
     './public/js/helpers/Sw/sw-utils.js'
