@@ -21,7 +21,7 @@ db.changes({
 }).on('change', UINotas)
 
 //INICIO SCRIPTS
-registrationSW();
+//registrationSW();
 
 Menu();
 //Notas();
