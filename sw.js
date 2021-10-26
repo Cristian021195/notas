@@ -9,10 +9,10 @@ const INMUTABLE_CACHE = 'inmutable-v1';
 
 const APP_SHELL = [
     //'/',
-    'index.html',
-    'public/css/style.css',
-    'public/js/index.js',
-    'public/js/helpers/Sw/sw-utils.js'
+    './index.html',
+    './public/css/style.css',
+    './public/js/index.js',
+    './public/js/helpers/Sw/sw-utils.js'
     /*'public/img/svg/dev-icon.svg',
     'public/img/avatars/hulk.jpg',
     'public/img/avatars/ironman.jpg',
