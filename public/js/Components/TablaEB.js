@@ -51,6 +51,8 @@ export function TablaEB(data, opciones, icons){
     function cortarTexto(texto){
         if(texto.length>25){
             return texto.slice(0,25)+'..';
+        }else{
+            return texto;
         }
         
     }

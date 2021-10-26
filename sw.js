@@ -14,7 +14,8 @@ const APP_SHELL = [
     './public/js/index.js',
     './public/js/Sw/sw-utils.js',
     './public/img/svg/bus-stop-bg.svg',
-    './public/img/svg/dev-icon.svg'
+    './public/img/svg/dev-icon.svg',
+    './public/libraries/pouchdb-find.js'
 
     /*'./public/css/style.css',
     './public/js/index.js',
