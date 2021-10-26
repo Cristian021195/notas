@@ -12,7 +12,7 @@ const APP_SHELL = [
     './index.html',
     './public/css/style.css',
     './public/js/index.js',
-    //'./public/js/helpers/Sw/sw-utils.js',
+    './public/js/Sw/sw-utils.js',
     './public/img/svg/bus-stop-bg.svg',
     './public/img/svg/dev-icon.svg'
 
