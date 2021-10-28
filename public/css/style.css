@@ -1,6 +1,7 @@
-table tr td:first-child{
+/*table tr td:first-child{
     white-space: nowrap;
     width: 7em; 
     overflow: hidden;
     text-overflow: ellipsis;
-}
+}*/
+body { overscroll-behavior-y: contain; }
