@@ -9,7 +9,7 @@ export function TablaEB(data, opciones, icons){
     let thead = Object.keys(data[0]).map(th=>{return th.toUpperCase()});
     let standard_columns = thead.length;
     opciones = opciones.map(e=>e.toUpperCase());
-    thead = [...thead, ...opciones];
+    thead = [...thead, ...opciones].map(th=>th.replace(/[_-]+/g, " "));
 
     //cabecera
     thead.forEach((th)=>{
