@@ -8,7 +8,7 @@
     "orientation": "portrait",
     "icons": [
         {
-            "src":"./public/img/notas.svg",
+            "src":"./public/img/icons/notas.svg",
             "sizes":"512x512",
             "type":"image/png"
         }
