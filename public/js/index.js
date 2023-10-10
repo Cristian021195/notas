@@ -39,7 +39,6 @@ $modalForm.addEventListener('submit', async(e)=>{
     try {
         let guardado = await db.put(todo);
         if(guardado){
-            console.log('agregada!');
             $modalForm.reset();
         }
     } catch (error) {
@@ -55,6 +54,8 @@ function UINotas(){
         if(arr_data.length > 0){
             $section.appendChild(TablaEB(arr_data, ['editar','eliminar'], {editar:'✏️', eliminar:'🗑️'}));
             TablaEB_Events(db);
+        }else{
+            $section.innerHTML = '<h3 class="text-danger text-center">¡Sin notas cargadas!</h3>'
         }
     });
 }

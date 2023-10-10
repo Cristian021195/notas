@@ -9,17 +9,10 @@ export function Menu(){
     const leftTolerance = window.innerWidth / 8;
     const titulo = 'Mis notas';
     const menu = [
-        /*{link:'comprobantes', dropdown:false},
-        {link:'productos', dropdown:false},
-        {link:'clientes', dropdown:false},
-        {link:'usuarios', dropdown:false},*/
         {link:'notas', dropdown:false},
         {link:'adicionales', dropdown:true,
             sub_links:['pwa','contacto']
         }
-        /*{link:'analisis', dropdown:true,
-            sub_links:['resumen ventas','stock']
-        },*/
     ]
 
     $titulo.textContent = titulo; $side_titulo.textContent = titulo;
